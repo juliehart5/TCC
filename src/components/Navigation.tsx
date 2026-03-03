@@ -28,7 +28,7 @@ export function Navigation() {
             <img
               src="/Logo.png"
               alt="The TCC Ltd"
-              className="h-10 sm:h-16 w-auto object-contain"
+              className="h-14 sm:h-24 w-auto object-contain"
             />
           </a>
 
