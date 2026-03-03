@@ -39,7 +39,7 @@ export function Navigation() {
               href="#services"
               className="font-mono text-xs text-[#B9B5AD] tracking-widest uppercase hover:text-[#C9A227] transition-colors"
             >
-              Work
+              Services
             </a>
             <a
               href="#approach"
@@ -76,7 +76,7 @@ export function Navigation() {
           onClick={() => setIsMobileMenuOpen(false)}
           className="font-mono text-lg text-[#B9B5AD] tracking-widest uppercase hover:text-[#C9A227] transition-colors"
         >
-          Work
+          SERVICES
         </a>
         <a
           href="#approach"

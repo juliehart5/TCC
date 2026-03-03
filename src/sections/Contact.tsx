@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import { Mail, MapPin, Send, Linkedin, Twitter, Share2 } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
 
 export function Contact() {
   const { ref: sectionRef, isRevealed } = useScrollReveal<HTMLElement>({ threshold: 0.15 });
@@ -133,50 +133,6 @@ export function Contact() {
           <p className="font-mono text-xs text-[#B9B5AD] tracking-widest">
             © 2026 The TCC Ltd. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <a
-              href="https://linkedin.com/company/thetccltd"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#B9B5AD] hover:text-[#C9A227] transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a
-              href="https://twitter.com/thetccltd"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#B9B5AD] hover:text-[#C9A227] transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter className="w-5 h-5" />
-            </a>
-            <button
-              onClick={() => {
-                if (navigator.share) {
-                  navigator.share({
-                    title: 'The TCC Ltd',
-                    text: 'Strategic Gold Trading & Asset Management',
-                    url: window.location.href,
-                  });
-                } else {
-                  navigator.clipboard.writeText(window.location.href);
-                  alert('Link copied to clipboard');
-                }
-              }}
-              className="text-[#B9B5AD] hover:text-[#C9A227] transition-colors"
-              aria-label="Share"
-            >
-              <Share2 className="w-5 h-5" />
-            </button>
-            <a
-              href="#"
-              className="font-mono text-xs text-[#B9B5AD] tracking-widest hover:text-[#C9A227] transition-colors"
-            >
-              Privacy
-            </a>
-          </div>
         </div>
       </div>
     </section>
