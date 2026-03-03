@@ -43,11 +43,16 @@
   
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100%;
   }
   
   body {
     @apply bg-[#0B0C0E] text-[#F7F7F5] antialiased;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;
+    position: relative;
   }
 }
 
