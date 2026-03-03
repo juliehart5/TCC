@@ -1,5 +1,5 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import { Shield, Package, Layers, Box, Bitcoin, DollarSign, History, FileText } from 'lucide-react';
+import { Shield, Package, Box, Bitcoin, DollarSign, History, FileText } from 'lucide-react';
 
 const services = [
   { icon: Package, title: 'Bullion & Dore Sourcing & Delivery' },
