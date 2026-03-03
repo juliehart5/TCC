@@ -4,6 +4,7 @@ const partners = [
   {
     name: 'Julie',
     image: '/Julie.jpeg',
+    objectPosition: 'center',
     bio: [
       'International lending and trade finance background',
       'Research and Innovation at top European Universities',
@@ -14,6 +15,7 @@ const partners = [
   {
     name: 'George',
     image: '/George.jpeg',
+    objectPosition: 'top',
     bio: [
       'Financial markets background',
       'Trade execution',
@@ -62,6 +64,7 @@ export function Partners() {
                     src={partner.image}
                     alt={partner.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    style={{ objectPosition: partner.objectPosition }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C0E] via-transparent to-transparent opacity-60" />
                 </div>
