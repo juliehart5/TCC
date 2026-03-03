@@ -26,7 +26,7 @@
     --input: 220 8% 18%;
     --ring: 45 72% 47%;
     --radius: 0.5rem;
-    
+
     /* TCC Custom Colors */
     --tcc-bg: #0B0C0E;
     --tcc-bg-light: #F2F0EA;
@@ -40,13 +40,13 @@
   * {
     @apply border-border;
   }
-  
+
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
     max-width: 100%;
   }
-  
+
   body {
     @apply bg-[#0B0C0E] text-[#F7F7F5] antialiased;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -87,14 +87,14 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(ellipse at 50% 45%, transparent 0%, rgba(11,12,14,0.5) 70%, rgba(11,12,14,0.75) 100%);
+  background: radial-gradient(ellipse at 50% 45%, transparent 0%, rgba(11, 12, 14, 0.5) 70%, rgba(11, 12, 14, 0.75) 100%);
 }
 
 /* Dark Overlay */
 .dark-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(11,12,14,0.55) 0%, rgba(11,12,14,0.75) 100%);
+  background: linear-gradient(180deg, rgba(11, 12, 14, 0.55) 0%, rgba(11, 12, 14, 0.75) 100%);
 }
 
 /* Animations */
@@ -103,6 +103,7 @@
     opacity: 0;
     transform: translateY(24px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -113,6 +114,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -123,6 +125,7 @@
     opacity: 0;
     transform: scale(1.06);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -134,6 +137,7 @@
     opacity: 0;
     transform: translateX(60px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -145,6 +149,7 @@
     opacity: 0;
     transform: translateX(-60px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -172,14 +177,37 @@
 }
 
 /* Stagger delays */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; }
-.delay-600 { animation-delay: 0.6s; }
-.delay-700 { animation-delay: 0.7s; }
-.delay-800 { animation-delay: 0.8s; }
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-600 {
+  animation-delay: 0.6s;
+}
+
+.delay-700 {
+  animation-delay: 0.7s;
+}
+
+.delay-800 {
+  animation-delay: 0.8s;
+}
 
 /* Scroll reveal base state */
 .reveal {
@@ -280,7 +308,8 @@
 }
 
 /* Form styles */
-input, textarea {
+input,
+textarea {
   @apply bg-transparent border-b border-[#F7F7F5]/30 py-3 px-0 text-[#F7F7F5] placeholder:text-[#B9B5AD] focus:outline-none focus:border-[#C9A227] transition-colors;
 }
 
