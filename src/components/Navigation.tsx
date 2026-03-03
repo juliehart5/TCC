@@ -18,7 +18,7 @@ export function Navigation() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-          ? 'bg-[#0B0C0E]/90 backdrop-blur-md py-4 sm:py-6'
+          ? 'bg-[#0B0C0E]/90 backdrop-blur-md py-2 sm:py-6'
           : 'bg-transparent py-4 sm:py-8'
           }`}
       >
@@ -28,7 +28,7 @@ export function Navigation() {
             <img
               src="/Logo.png"
               alt="The TCC Ltd"
-              className={`transition-all duration-500 w-auto object-contain ${isScrolled ? 'h-32 sm:h-48' : 'h-48 sm:h-80'
+              className={`transition-all duration-500 w-auto object-contain ${isScrolled ? 'h-20 sm:h-48' : 'h-48 sm:h-80'
                 }`}
             />
           </a>
