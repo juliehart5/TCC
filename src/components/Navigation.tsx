@@ -18,15 +18,15 @@ export function Navigation() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-            ? 'bg-[#0B0C0E]/90 backdrop-blur-md py-4 sm:py-6'
-            : 'bg-transparent py-4 sm:py-8'
+          ? 'bg-[#0B0C0E]/90 backdrop-blur-md py-4 sm:py-6'
+          : 'bg-transparent py-4 sm:py-8'
           }`}
       >
         <div className="px-6 sm:px-12 lg:px-[6vw] flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center">
             <img
-              src="/TheTCCLtd_Silver_Nav.png"
+              src="/Logo.png"
               alt="The TCC Ltd"
               className="h-10 sm:h-16 w-auto object-contain"
             />
