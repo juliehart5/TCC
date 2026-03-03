@@ -5,7 +5,7 @@ import { GlobalReach } from '@/sections/GlobalReach';
 import { MarketsChange } from '@/sections/MarketsChange';
 import { Services } from '@/sections/Services';
 import { Trust } from '@/sections/Trust';
-import { Opportunity } from '@/sections/Opportunity';
+import { Partners } from '@/sections/Opportunity';
 import { Discipline } from '@/sections/Discipline';
 import { ReadyCTA } from '@/sections/ReadyCTA';
 import { Contact } from '@/sections/Contact';
@@ -43,8 +43,8 @@ function App() {
           <Trust />
         </div>
 
-        {/* Section 7: Opportunity */}
-        <Opportunity />
+        {/* Section 7: Partners */}
+        <Partners />
 
         {/* Section 8: Discipline */}
         <Discipline />
