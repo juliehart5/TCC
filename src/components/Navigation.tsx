@@ -28,7 +28,7 @@ export function Navigation() {
             <img
               src="/Logo.png"
               alt="The TCC Ltd"
-              className={`transition-all duration-500 w-auto object-contain ${isScrolled ? 'h-20 sm:h-48' : 'h-48 sm:h-80'
+              className={`transition-all duration-500 w-auto object-contain ${isScrolled ? 'h-16 sm:h-28' : 'h-24 sm:h-40'
                 }`}
             />
           </a>

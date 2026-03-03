@@ -1,13 +1,15 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import { Shield, TrendingUp, Globe, BarChart3, Package, Layers } from 'lucide-react';
+import { Shield, Package, Layers, Box, Bitcoin, DollarSign, History, FileText } from 'lucide-react';
 
 const services = [
   { icon: Package, title: 'Bullion Sourcing & Delivery' },
-  { icon: Shield, title: 'Hedging & Risk Management' },
-  { icon: TrendingUp, title: 'Trade Execution' },
-  { icon: BarChart3, title: 'Market Intelligence' },
-  { icon: Globe, title: 'Custody & Logistics' },
-  { icon: Layers, title: 'Structured Solutions' },
+  { icon: Layers, title: 'Gold Dore Sourcing & Delivery' },
+  { icon: Shield, title: 'Silver Sourcing & Delivery' },
+  { icon: Box, title: 'Copper Cathode Sourcing & Delivery' },
+  { icon: Bitcoin, title: 'BTC private sales & purchase' },
+  { icon: DollarSign, title: 'USDT private sales & purchase' },
+  { icon: History, title: 'Historical Asset Sourcing' },
+  { icon: FileText, title: 'Private Placement Programmes' },
 ];
 
 export function Services() {
