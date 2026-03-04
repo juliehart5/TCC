@@ -38,7 +38,7 @@ export function GlobalReach() {
           className={`mt-8 max-w-2xl text-[clamp(14px,1.2vw,16px)] text-[#B9B5AD] leading-relaxed transition-all duration-1000 delay-200 ${isRevealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
         >
-          From London to Hong Kong, New York to Dubai—our network turns local insight
+          From London to Hong Kong, New York to Dubai our network turns local insight
           into global execution.
         </p>
 

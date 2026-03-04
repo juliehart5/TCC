@@ -40,7 +40,7 @@ export function MarketsChange() {
             }`}
         >
           Discipline beats noise. Our process is designed to protect capital and
-          capture asymmetric opportunities—across cycles.
+          capture asymmetric opportunities across cycles.
         </p>
 
         {/* Stats */}

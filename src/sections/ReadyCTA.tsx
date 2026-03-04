@@ -41,7 +41,7 @@ export function ReadyCTA() {
             }`}
         >
           If you're looking for a partner who values discretion, speed, and
-          long-term thinking—let's talk.
+          long term thinking let's talk.
         </p>
 
         {/* CTAs */}

@@ -43,8 +43,8 @@ export function Services() {
               className={`mt-8 max-w-md text-[clamp(14px,1.1vw,16px)] text-[#0B0C0E]/70 leading-relaxed transition-all duration-1000 delay-200 ${isRevealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 }`}
             >
-              We specialise in precious metals and commodities—advisory, execution,
-              and structuring—tailored to institutional and private clients.
+              We specialise in precious metals and commodities advisory, execution,
+              and structuring tailored to institutional and private clients.
             </p>
           </div>
 

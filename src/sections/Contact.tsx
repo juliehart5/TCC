@@ -36,7 +36,7 @@ export function Contact() {
               Contact
             </h2>
             <p className="mt-6 max-w-md text-[clamp(14px,1.1vw,16px)] text-[#B9B5AD] leading-relaxed">
-              For inquiries, mandates, or a confidential discussion—reach us directly.
+              For inquiries, mandates, or a confidential discussion reach us directly.
             </p>
 
             <div className="mt-12 space-y-6">

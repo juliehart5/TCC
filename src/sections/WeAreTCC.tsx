@@ -39,8 +39,8 @@ export function WeAreTCC() {
             }`}
         >
           A partnership built on execution. We move between markets, time zones, and
-          opportunities—always with the same standard: precision, discretion, and
-          long-term thinking.
+          opportunities always with the same standard: precision, discretion, and
+          long term thinking.
         </p>
 
         {/* Partners */}
@@ -54,7 +54,7 @@ export function WeAreTCC() {
           </div>
           <div>
             <p className="font-mono text-xs text-[#B9B5AD] tracking-widest uppercase mb-2">Partner</p>
-            <p className="text-[clamp(16px,1.5vw,20px)] text-[#F7F7F5] font-medium">Julie Hart-Thompson</p>
+            <p className="text-[clamp(16px,1.5vw,20px)] text-[#F7F7F5] font-medium">Julie Hart Thompson</p>
           </div>
         </div>
 
