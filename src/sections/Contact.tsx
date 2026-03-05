@@ -130,7 +130,7 @@ export function Contact() {
           className={`mt-24 pt-8 border-t border-[#F7F7F5]/10 transition-all duration-1000 delay-400 ${isRevealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
         >
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 w-full">
+          <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-6 w-full">
             <p className="font-mono text-xs text-[#B9B5AD] tracking-widest">
               © 2026 The TCC Ltd. All rights reserved.
             </p>
