@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send, Linkedin } from 'lucide-react';
 
 export function Contact() {
   const { ref: sectionRef, isRevealed } = useScrollReveal<HTMLElement>({ threshold: 0.15 });
@@ -127,12 +127,26 @@ export function Contact() {
 
         {/* Footer */}
         <div
-          className={`mt-24 pt-8 border-t border-[#F7F7F5]/10 flex flex-col sm:flex-row justify-between items-center gap-4 transition-all duration-1000 delay-400 ${isRevealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+          className={`mt-24 pt-8 border-t border-[#F7F7F5]/10 transition-all duration-1000 delay-400 ${isRevealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
         >
-          <p className="font-mono text-xs text-[#B9B5AD] tracking-widest">
-            © 2026 The TCC Ltd. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 w-full">
+            <p className="font-mono text-xs text-[#B9B5AD] tracking-widest">
+              © 2026 The TCC Ltd. All rights reserved.
+            </p>
+            <div className="flex items-center gap-6">
+              <a
+                href="https://www.linkedin.com/company/the-tcc-ltd/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 text-[#C9A227] hover:text-[#F7F7F5] transition-all duration-300 bg-[#C9A227]/5 px-4 py-2 rounded-full border border-[#C9A227]/20"
+                aria-label="Visit The TCC Ltd on LinkedIn"
+              >
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-medium">LinkedIn</span>
+                <Linkedin className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" strokeWidth={2} />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
