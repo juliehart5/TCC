@@ -1,27 +1,50 @@
 import { useState } from 'react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { Mail, MapPin, Send, Linkedin } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { toast } from 'sonner';
 
 export function Contact() {
   const { ref: sectionRef, isRevealed } = useScrollReveal<HTMLElement>({ threshold: 0.15 });
-  const { ref: formRef, isRevealed: formRevealed } = useScrollReveal<HTMLFormElement>({ threshold: 0.2 });
+  const { ref: form, isRevealed: formRevealed } = useScrollReveal<HTMLFormElement>({ threshold: 0.2 });
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     message: ''
   });
+  const [isSending, setIsSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    alert('Thank you for your message. We will respond within one business day.');
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setIsSending(true);
+
+    const promise = emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_114vcyr",
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_f5kv4pp",
+      form.current!,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "wBwGwyT0F6dJiBQxY"
+    );
+
+    toast.promise(promise, {
+      loading: 'Sending your message...',
+      success: () => {
+        setIsSending(false);
+        setFormData({ name: '', email: '', company: '', message: '' });
+        return 'Message sent successfully!';
+      },
+      error: (err) => {
+        setIsSending(false);
+        console.error("Failed to send message", err);
+        return 'Failed to send message. Please try again.';
+      },
+    });
   };
 
   return (
     <section
       ref={sectionRef}
+      id="contact"
       className="relative w-full py-14 lg:py-32"
       style={{ backgroundColor: '#0B0C0E' }}
     >
@@ -58,11 +81,15 @@ export function Contact() {
 
           {/* Right Column - Form */}
           <form
-            ref={formRef}
-            onSubmit={handleSubmit}
+            ref={form}
+            onSubmit={sendEmail}
             className={`space-y-6 transition-all duration-1000 delay-200 ${formRevealed ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
               }`}
           >
+            {/* Hidden fields for EmailJS Template */}
+            <input type="hidden" name="title" value="New Inquiry from Website" />
+            <input type="hidden" name="time" value={new Date().toLocaleString()} />
+
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
                 <label className="block font-mono text-xs text-[#B9B5AD] tracking-widest uppercase mb-2">
@@ -70,6 +97,7 @@ export function Contact() {
                 </label>
                 <input
                   type="text"
+                  name="name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full"
@@ -83,6 +111,7 @@ export function Contact() {
                 </label>
                 <input
                   type="email"
+                  name="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full"
@@ -97,6 +126,7 @@ export function Contact() {
               </label>
               <input
                 type="text"
+                name="company"
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                 className="w-full"
@@ -108,6 +138,7 @@ export function Contact() {
                 Message
               </label>
               <textarea
+                name="message"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 className="w-full min-h-[120px] resize-none"
@@ -117,10 +148,11 @@ export function Contact() {
             </div>
             <button
               type="submit"
-              className="btn-primary w-full sm:w-auto"
+              disabled={isSending}
+              className="btn-primary w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <Send className="w-4 h-4 mr-2" />
-              Send message
+              <Send className={`w-4 h-4 mr-2 ${isSending ? 'animate-pulse' : ''}`} />
+              {isSending ? 'Sending...' : 'Send message'}
             </button>
           </form>
         </div>

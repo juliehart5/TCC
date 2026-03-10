@@ -1,4 +1,5 @@
 import { Navigation } from '@/components/Navigation';
+import { Toaster } from 'sonner';
 import { Hero } from '@/sections/Hero';
 import { WeAreTCC } from '@/sections/WeAreTCC';
 import { GlobalReach } from '@/sections/GlobalReach';
@@ -13,6 +14,7 @@ import { Contact } from '@/sections/Contact';
 function App() {
   return (
     <div className="relative overflow-x-hidden w-full">
+      <Toaster position="top-center" richColors />
       {/* Grain Overlay */}
       <div className="grain-overlay" />
 
